@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer" />
+
+  <title>Beyond Floor Solutions</title>
+
+  <style>
+    body {
+      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #d2b48c 20%, #ffffff 40%, #a0522d 60%, #ffffff 80%, #8b4513 100%);
+      background-size: 200% 200%;
+      animation: epoxyFlow 15s ease infinite;
+      background-attachment: fixed;
+    }
+
+    @keyframes epoxyFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* Nav Phone Number */
+
+    .fas {
+      color: #ba7405;
+    }
+
+    .fas:hover {
+      color: #ab9017;
+      /* color changes when hovering */
+    }
+
+    .phone-link .phone-number {
+      color: #ba7405;
+      /* change to any color you want */
+    }
+
+    /* Hover color */
+    .phone-link:hover .phone-number {
+      color: #ab9017;
+      /* color changes when hovering */
+    }
+
+
+    /* Hero Section */
+    header.hero {
+      position: relative;
+      background: url("https://images.unsplash.com/photo-1598300056397-9a9c3a9a05f7?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      color: #fff;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    header.hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    header.hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(45deg, #ef9038, #854007);
+      color: #fff !important;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Services Section */
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Call-to-Action Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #ffffff, #000000);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 60px;
+    }
+
+    .cta-banner h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta-banner .btn {
+      background: #ba7405;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 12px 30px;
+    }
+
+    .cta-banner .btn:hover {
+      background: #000000;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 40px 20px;
+    }
+
+    .footer-locations i {
+      color: #0d6efd;
+      margin-right: 6px;
+    }
+
+    .social-icon {
+      transition: transform 0.3s, color 0.3s;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+      color: #0d6efd;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="photos/BFS5.jpeg" alt="Beyond Floor Solutions Logo" height="100"
+          class="d-inline-block align-text-top">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+
+          <!-- Clickable phone number with icon -->
+          <li class="nav-item d-flex align-items-center ms-3">
+            <a class="nav-link d-flex align-items-center phone-link" href="tel:6024277077">
+              <i class="fas fa-phone-alt me-2"></i> <span class="phone-number">(602) 427-7077</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container">
+        <h1>Welcome To Beyond Floor Solutions</h1>
+        <p class="lead mt-3">High-Performance Epoxy Flooring Solutions Built To Last.<br>
+          From Sleek Residential Finishes To Heavy-Duty Industrial Protection, We Deliver Quality You Can Stand On.</p>
+        <a href="services.html" class="btn btn-gradient btn-lg mt-3">Explore Our Services</a>
+      </div>
+    </header>
+
+    <!-- Video Section -->
+    <section class="position-relative">
+      <video autoplay loop muted playsinline class="w-100" style="max-height: 500px; object-fit: cover;">
+        <source src="photos/Apoxy50.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Optional overlay text (remove if not needed) -->
+      <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+        <h2 class="fw-bold display-5">High-Performance Flooring Solutions</h2>
+        <p>Durability. Design. Dependability.</p>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="container my-5">
+      <h2 class="text-center fw-bold mb-5">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4 d-flex flex-column">
+            <i class="fas fa-warehouse fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Garage Flooring</h5>
+            <p class="card-text flex-grow-1">
+              Durable Epoxy Coatings That Transform Your Garage Into A Clean, Modern, And Protected Space.
+            </p>
+            <div class="mt-auto">
+              <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4 d-flex flex-column">
+            <i class="fas fa-paint-roller fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Concrete Stain</h5>
+            <p class="card-text flex-grow-1">
+              Enhance Your Concrete With Rich Colors And Long-Lasting Protection For Residential Or Commercial Spaces.
+            </p>
+            <div class="mt-auto">
+              <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4 d-flex flex-column">
+            <i class="fas fa-home fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Warehouse & Residential</h5>
+            <p class="card-text flex-grow-1">
+              Heavy-Duty Epoxy Flooring For Warehouses And Sleek, Stylish Finishes For Residential Interiors.
+            </p>
+            <div class="mt-auto">
+              <a href="services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="position-relative">
+      <img src="photos/apoxy51.jpeg" alt="Epoxy flooring" class="w-100"
+        style="max-height: 500px; object-fit: cover; filter: brightness(80%);">
+
+      <!-- Optional overlay text -->
+      <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+        <h2 class="fw-bold display-5">Epoxy Flooring Excellence</h2>
+        <p>Transforming Spaces With Strength And Style</p>
+      </div>
+    </section>
+
+
+
+
+    <!-- Call-to-Action Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Ready To Transform Your Floors?</h2>
+        <p class="lead">Get A Free Consultation Today And Discover The Perfect Epoxy Solution For Your Space.</p>
+        <a href="services.html" class="btn btn-lg">Get A Free Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="mb-4 footer-locations">
+      <h5 class="fw-bold mb-3">Proudly Serving Arizona</h5>
+      <p>
+        <i class="fas fa-map-pin"></i> Scottsdale
+        &nbsp; <i class="fas fa-map-pin"></i> Mesa
+        &nbsp; <i class="fas fa-map-pin"></i> Phoenix
+        &nbsp; <i class="fas fa-map-pin"></i> Chandler
+        &nbsp; <i class="fas fa-map-pin"></i> Gilbert
+        &nbsp; <i class="fas fa-map-pin"></i> Tempe
+        &nbsp; <i class="fas fa-map-pin"></i> Paradise Valley
+        &nbsp; <i class="fas fa-map-pin"></i> Queen Creek
+        &nbsp; <i class="fas fa-map-pin"></i> San Tan Valley
+        &nbsp; <i class="fas fa-map-pin"></i> Surprise
+        &nbsp; <i class="fas fa-map-pin"></i> Tolleson
+        &nbsp; <i class="fas fa-map-pin"></i> Avondale
+        &nbsp; <i class="fas fa-map-pin"></i> Desert Ridge
+        &nbsp; <i class="fas fa-map-pin"></i> Fountain Hills
+        &nbsp; <i class="fas fa-map-pin"></i> Glendale
+        &nbsp; <i class="fas fa-map-pin"></i> Maricopa
+      </p>
+    </div>
+    <p class="mb-2">&copy; 2025 Beyond Floor Solutions. All Rights Reserved.</p>
+    <div>
+      <a href="https://www.facebook.com/BeyondFloorSolutions" target="_blank" rel="noopener noreferrer"
+        class="text-dark me-3 social-icon">
+        <i class="fab fa-facebook fa-lg"></i>
+      </a>
+
+      <a href="https://www.instagram.com/beyondfloorsolutionsllc/" target="_blank" rel="noopener noreferrer"
+        class="text-dark me-3 social-icon">
+        <i class="fab fa-instagram fa-lg"></i>
+      </a>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
